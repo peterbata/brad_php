@@ -56,6 +56,8 @@
 	// }
 
 
+	# Associative Arrays
+	
 	$people = array('Brad' => 'brad@gmail.com', 'Jose' => 'jose@gmail.com', 'William' => 'william@gmail.com');
 	
 	
