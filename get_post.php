@@ -35,6 +35,6 @@
 			<a href="get_post.php?name=Renata">Renata</a>
 		</li>
 	</ul>
-	<h1><?php echo "{$name}'s Profile";?></h1>
+	<h1><?php echo "{$name}'s Profile"; ?></h1>
 </body>
 </html>
