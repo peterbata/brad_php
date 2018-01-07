@@ -25,7 +25,7 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Search Users</h1>
+		<h1>Contract - Client Search</h1>
 	<form action="" method="post">
 		Search User: <input type="text" class="form-control" onkeyup="showSuggestion(this.value)">
 	</form>

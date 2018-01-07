@@ -154,6 +154,14 @@ $people = array(
 'Toshie',
 'ECF12060',
 'ECF12050',
+'Themens',
+'Delucilla',
+'Varanese A',
+'Varanese L',
+'Mazzaferro A',
+'Mazzaferro C',
+'4000712564',
+'4007564789',
 'Junko');
 // Get Query String
 
