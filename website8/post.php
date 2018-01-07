@@ -1,11 +1,17 @@
 <?php
 	
 	require('config/config.php');
+
 	require('config/db.php');
+
+	
+	// Get ID
+	
+	$id = mysqli_real_escape_string($conn, $_GET['id']);
 
 	// Create query
 	
-	$query = 'SELECT * FROM posts';
+	$query = 'SELECT * FROM posts WHERE id= '.$id;
 
 	// Get results
 
@@ -13,7 +19,7 @@
 
 	// Fetch data
 
-	$posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
+	$post = mysqli_fetch_assoc($result);
 	// var_dump($posts);
 
 	// Free restore_include_path
@@ -26,15 +32,9 @@
 
 <?php include('inc/header.php'); ?>
 		<div class="container">
-		<h1>Posts</h1>
-		<?php foreach($posts as $post) : ?>
-			<div class="well">
-			<h3><?php echo $post['title']; ?></h3>
+			<a href="<?php echo ROOT_URL; ?>" class="btn btn-default">Back</a>
+			<h1><?php echo $post['title']; ?></h1>
 			<small>Created on <?php echo $post['created_at']; ?> by <?php echo $post['author']; ?></small>
 			<p><?php echo $post['body']; ?></p>
-			<a class="btn btn-default" href="<?php echo ROOT_URL;
-			?>post.php?id=<?php echo $post['id']; ?>">Read More</a>
-			</div>
-		<?php endforeach; ?>
 		</div>
 <?php include('inc/footer.php'); ?>
