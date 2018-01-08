@@ -5,7 +5,7 @@
 
 	// Create query
 	
-	$query = 'SELECT * FROM posts';
+	$query = 'SELECT * FROM posts ORDER BY created_at DESC';
 
 	// Get results
 
